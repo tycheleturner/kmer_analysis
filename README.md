@@ -30,4 +30,11 @@
 | Fish | Chelmon rostratus | Copperband Butterflyfish | Vertebrate Genome Project |
 | Fish | Melanotaenia boesemani | Boeseman's Rainbowfish | Vertebrate Genome Project |
 
+## Analysis Steps
+
+### 01. Download the Genomes
+```
+sh download_genomes.sh
+```
+
 
