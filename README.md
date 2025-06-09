@@ -37,4 +37,35 @@
 sh download_genomes.sh
 ```
 
+### 02. Decompress the genomes so kanalyze can work
+```
+for i in *gz
+do
+	gunzip "$i"
+done
+```
+
+### 03. Download kanalyze from https://sourceforge.net/projects/kanalyze/ and ensure you have java installed on your machine.
+
+### 04. To start, count the 4-mer and 5-mer profiles from each genome
+```
+#!/bin/bash
+
+for i in *fasta
+do
+	/data/kanalyze-2.0.0/count -k 4 -f fasta -o "$i".4mer.kc "$i"
+	/data/kanalyze-2.0.0/count -k 5 -f fasta -o "$i".5mer.kc "$i"
+done
+
+for i in *fa
+do
+	/data/kanalyze-2.0.0/count -k 4 -f fasta -o "$i".4mer.kc "$i"
+	/data/kanalyze-2.0.0/count -k 5 -f fasta -o "$i".5mer.kc "$i"
+done
+```
+
+05. Rename the kc files to something obvious (re: species name)
+
+
+
 
