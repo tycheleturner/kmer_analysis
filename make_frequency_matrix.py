@@ -1,6 +1,7 @@
 #!/bin/python3
 # k-mer frequency matrix generation script
 # for 06 and 07
+# assumes user has KAnalyze files already generated
 
 import os
 import re
@@ -9,11 +10,6 @@ import argparse
 import pandas as pd
 
 def read_kc_file(path):
-    """
-    Read one KAnalyze count (.kc) file where each line is:
-        <kmer_string> <count>
-    Returns a pandas Series indexed by k-mer (A/C/G/T) with integer counts.
-    """
     counts = {}
     with open(path, "r") as f:
         for line in f:
