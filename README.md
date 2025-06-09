@@ -53,18 +53,18 @@ done
 
 for i in *fasta
 do
-	/data/kanalyze-2.0.0/count -k 4 -f fasta -o "$i".4mer.kc "$i"
-	/data/kanalyze-2.0.0/count -k 5 -f fasta -o "$i".5mer.kc "$i"
+	./kanalyze-2.0.0/count -k 4 -f fasta -o "$i".4mer.kc "$i"
+	./kanalyze-2.0.0/count -k 5 -f fasta -o "$i".5mer.kc "$i"
 done
 
 for i in *fa
 do
-	/data/kanalyze-2.0.0/count -k 4 -f fasta -o "$i".4mer.kc "$i"
-	/data/kanalyze-2.0.0/count -k 5 -f fasta -o "$i".5mer.kc "$i"
+	./kanalyze-2.0.0/count -k 4 -f fasta -o "$i".4mer.kc "$i"
+	./kanalyze-2.0.0/count -k 5 -f fasta -o "$i".5mer.kc "$i"
 done
 ```
 
-05. Rename the kc files to something obvious (re: species name)
+### 05. Rename the kc files to something obvious (re: species name)
 
 
 
