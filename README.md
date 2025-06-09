@@ -66,6 +66,8 @@ done
 
 ### 05. Rename the kc files to something obvious (re: species name)
 
-
-
+### 06. Make a k-mer frequency matrix from the data of one k-mer length
+```
+python3 make_frequency_matrix.py -i ./kmer_profiles/ --pattern='*.5mer.kc' --output_csv test.csv
+```
 
